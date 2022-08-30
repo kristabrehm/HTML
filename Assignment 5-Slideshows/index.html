@@ -66,10 +66,10 @@
       document.getElementById("numContainer").innerHTML = markup;
 
       if(aniType == "fading"){
-        allImages[i].style.display = "block";
+        allImages.fadeOut();
       }
       else{
-        allImages[i].style.display = "none";
+        allImages.fadeIn();
       }
       goToCurrentSlide();
     }
@@ -96,17 +96,16 @@
     }
 
     var goToCurrentSlide = function(){
-        var allImgObjs = document.getElementsByClassName("slide");
-        var allNumObjs = document.getElementsByClassName("num");
-        for(var i = 0; i < allImgObjs.length; i++){
-          if(aniType == "fading"){
-          allImgObjs[i].style.opacity = "1";
-          allNumObjs[i].className = "num active";
-        }
-        else {
-        allImgObjs[i].style.opacity = "0";
-        allNumObjs[i].className = "num";
-        }
+      if(aniType == "fading"){
+      var allImgObjs = document.getElementsByClassName("slide")
+      var allNumObjs = document.getElementsByClassName("num")
+      var i = 0;
+
+      allImgObjs[i].style.opacity = "1";
+      allNumObjs[i].className = "num active"; 
+      }
+      else{
+      aniType = "sliding";
       }
     }
 
@@ -125,3 +124,4 @@
 
 
 </html>
+
