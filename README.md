@@ -1,5 +1,1 @@
-# AME220Fall2022
-AME 220 Fall Session A Course:
-
-Krista Brehm
-ASU ID: 1220902163
+Arts, Media, and Engineering 220 teaches the basics of HMTL. IN this repository, find fe assignments regarding HTML code.
